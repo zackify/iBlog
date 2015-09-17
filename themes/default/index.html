@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<!-- META -->
+		<title>{pagetitle}</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="<!-- put your name here -->" />
+		<meta name="copyright" content="<!-- put your copyright here -->" />
+		<meta name="description" content="<!-- put your description here-->" />
+		<meta name="keywords" content="<!-- put your keywords here -->" />
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/reset.css" media="screen, projection" />
+		<link rel="stylesheet" href="assets/css/style.css" media="screen, projection" />
+		<link rel="stylesheet" href="assets/css/nivo.css" media="screen, projection" />
+		
+		<!-- JAVASCRIPT -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="assets/js/nivo.js"></script>
+				<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if (gte IE 6)&(lte IE 8)]>
+		  <script type="text/javascript" src="selectivizr.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	
+		<header id="header" role="banner">
+			<h1><a href="index.php">{pagetitle}</a></h1>
+			<h2>{tagline}</h2>
+		</header>
+		
+		<nav id="nav" role="navigation">
+		
+			<ul class="right">
+			
+				<li><a href="index.php" >Home</a></li>
+				{block:pages}
+<li><a href="{url}" >{title}</a></li>
+	{/block:pages}
+			</ul>
+		
+		</nav>
+		
+		<div id="main_content" role="section">			<section role="document">
+			
+				
+				<article role="article" class="left">
+				{block:posts}
+					<header role="heading">
+						<h1>{title}</h1>
+					</header>
+{body}
+				</article>	<br><br>
+									<p><a href="{url}">Permalink</a></p>
+				{/block:posts}
+							</section>
+		
+			<aside role="complementary" class="right">
+				
+				<header role="heading">
+					<h1>{newstitle}</h1>
+				</header>
+				
+				{news}
+				
+			</aside>
+		
+		</div>
+			
+<footer id="footer" role="contentinfo">
+		
+			<section id="favourites" class="left">
+				
+				<header>
+					<h2>Links</h2>
+					<!-- Some of your favourite sites, or whatever you want. -->
+				</header>
+				
+				<ul>
+					
+					<li>{loginurl}</li>
+				
+					
+				</ul>
+				
+			</section>
+			
+
+			
+			
+			
+			<p class="right">Copyright &copy; {sitename}. <span class="right"><a href="http://zachs.co" title="Coder of this website.">Coding by Zach</a> - <a href="http://iamsteve.me" title="Creator of the template for this website.">Design by Steve</a></span></p>
+		</footer>
+	
+	</body>
+
+</html>
